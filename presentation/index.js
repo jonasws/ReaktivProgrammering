@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from "react";
 
-import { Spectacle, Deck, Slide, Heading, Text, S, Appear, List, ListItem } from 'spectacle';
+import { Spectacle, Deck, Slide, Heading, Text, S, Appear, List, ListItem } from "spectacle";
 
-import 'normalize.css';
-import 'spectacle/lib/themes/default/index.css';
+import "normalize.css";
+import "spectacle/lib/themes/default/index.css";
 
-import createTheme from 'spectacle/lib/themes/default';
+import createTheme from "spectacle/lib/themes/default";
 
 const theme = createTheme({
 }, {
@@ -13,13 +13,13 @@ const theme = createTheme({
 
 const Presentation = () =>
   <Spectacle theme={theme}>
-    <Deck transition={['slide']}>
+    <Deck transition={["slide"]}>
       <Slide>
         <Heading fit lineHeight={2}>Reaktiv Programmering</Heading>
         <Text italic>En historie om at det lønner seg å være streng</Text>
       </Slide>
 
-      <Slide align="flex-start">
+      <Slide>
         <Heading size={1}>Agenda</Heading>
         <List ordered>
           <Appear>
@@ -32,7 +32,7 @@ const Presentation = () =>
             <ListItem>Reaktiv programmering som "paradigme"</ListItem>
           </Appear>
           <Appear>
-            <ListItem>Kode eksempler</ListItem>
+            <ListItem>Kode-eksempler</ListItem>
           </Appear>
         </List>
       </Slide>
