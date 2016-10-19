@@ -1,0 +1,9 @@
+    <p id="caption">Her er noe tekst</p>
+    <button id="toggleUppercase"></button>
+    <script>
+    $(function () {
+      $('#toggleUppercase').click(function () {
+        $('#caption').addClass('uppercase').after('<p>nytt innhold</p>');
+      });
+    });
+    </script>
