@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Spectacle, Deck, CodePane, Fill, Slide, Heading, Text, S, Appear, Image, List, ListItem } from "spectacle";
+import { Spectacle, Deck, CodePane, Slide, Heading, Text, S, Appear, Image, List, ListItem } from "spectacle";
 
 import DelayedPop from "./util/delayed-pop";
 
@@ -94,6 +94,9 @@ const Presentation = () =>
       </Slide>
       <Slide>
         <Image src={images.chaos} width="80%" height="80%" />
+      </Slide>
+      <Slide>
+        <CodePane source={require('!raw!./examples/pure-functional-programming.js')} lang="js" />
       </Slide>
       <Slide>
         <List>
