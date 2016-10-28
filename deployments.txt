@@ -1,1 +1,2 @@
- fierce-neck.surge.sh
+fierce-neck.surge.sh
+fuzzy-price.surge.sh
