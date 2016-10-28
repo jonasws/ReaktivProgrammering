@@ -15,12 +15,19 @@ const theme = createTheme({
 }, {
 });
 
+
 const images = {
   confused: "http://i.giphy.com/xI5dVJKpKLzK8.gif",
   chaos: "http://i.giphy.com/l0HlIBEZ0keLzkt5C.gif",
+  screenshotSearch: require('url!./images/screenshot-search.png'),
   question: "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimg.youtube.com%2Fvi%2F_UzGgIz52YU%2F0.jpg&f=1"
 };
 preloader(images);
+
+const AppearList = ({ ordered, children }) =>
+  <List ordered={ordered}>
+    {children.map(child => <Appear>{child}</Appear>)}
+  </List>;
 
 const Presentation = () =>
   <Spectacle theme={theme}>
@@ -36,20 +43,12 @@ const Presentation = () =>
 
       <Slide>
         <Heading size={2}>Hvordan går vi så frem i dag?</Heading>
-        <List ordered>
-          <Appear>
+        <AppearList ordered>
             <ListItem>Mimring</ListItem>
-          </Appear>
-          <Appear>
             <ListItem><S type="italic">Pure Functional Programming</S></ListItem>
-          </Appear>
-          <Appear>
             <ListItem>"Data i fokus"</ListItem>
-          </Appear>
-          <Appear>
             <ListItem>Kodeeksempler - påpeke og drøfte ulikheter</ListItem>
-          </Appear>
-        </List>
+        </AppearList>
       </Slide>
       <Slide notes="mange ting som skjer, imperativ koding, man vet ikke hvordan grensesnittet blir seende ut">
         <CodePane textSize="1.4rem" source={require("!raw!./examples/jquery-old-example.html")} lang="html"/>
@@ -115,10 +114,12 @@ const Presentation = () =>
       </Slide>
       <Slide>
         <Layout>
-        <Fill>
-          <Heading size={4} textColor="darkGreen">Sånn:</Heading>
-          <Code>(state, action) => newState</Code>
-        </Fill>
+        <Appear>
+          <Fill>
+            <Heading size={4} textColor="darkGreen">Sånn:</Heading>
+            <Code>(state, action) => newState</Code>
+          </Fill>
+        </Appear>
         <Fill>
           <Appear>
             <div>
@@ -130,22 +131,11 @@ const Presentation = () =>
         </Layout>
       </Slide>
       <Slide>
-        <Heading size={2}>Hvilke muligheter finnes?</Heading>
-        <List>
-          <ListItem textSize="2rem">Redux</ListItem>
-          <ListItem textSize="2rem">Immutable.js</ListItem>
-          <ListItem textSize="2rem">Object.assign</ListItem>
-          <ListItem>Spreads</ListItem>
-          <ListItem>Computed property names</ListItem>
-          <ListItem>MobX</ListItem>
-          <ListItem>RxJS</ListItem>
-          <ListItem>Elm</ListItem>
-        </List>
+        <Text textSize="4rem" italic>Men applikasjonen min har bare èn komponent, eller jeg vil bare raske sammen no' greier!</Text>
       </Slide>
       <Slide>
-        <Text textSize="4rem" italic>Men applikasjonen min har bare èn komponent, eller jeg vil bare raske sammen noe!</Text>
+        <Image height="100%" width="100%" src={images.screenshotSearch} />
       </Slide>
-
       <Slide>
         <Text>Det kan fort lønne seg å tvinge seg gjennom en "verbos" tilnærming til å begynne med</Text>
       </Slide>
@@ -167,6 +157,19 @@ const Presentation = () =>
           <ListItem>Vanskelig å avstå fra "snarveier"</ListItem>
         </List>
       </Slide>
+      <Slide>
+        <Heading size={2}>Hvilke muligheter finnes?</Heading>
+        <List>
+          <ListItem textSize="2rem">Redux</ListItem>
+          <ListItem textSize="2rem">Immutable.js</ListItem>
+          <ListItem textSize="2rem">Object.assign</ListItem>
+          <ListItem>Spreads</ListItem>
+          <ListItem>Computed property names</ListItem>
+          <ListItem>MobX</ListItem>
+          <ListItem>RxJS</ListItem>
+          <ListItem>Elm</ListItem>
+        </List>
+      </Slide>
 
       {/* Konklusjon */}
       <Slide>
@@ -176,6 +179,17 @@ const Presentation = () =>
             <ListItem>Mutèr med måte, altså IKKE MUTÈR!</ListItem>
             <ListItem>Samle tilstand på "ett" sted</ListItem>
         </List>
+      </Slide>
+
+      <Slide>
+        <Heading>Verktøy</Heading>
+        <AppearList>
+          <ListItem>ES2015</ListItem>
+          <ListItem>React + Redux</ListItem>
+          <ListItem>Spectacle</ListItem>
+          <ListItem>surge.sh</ListItem>
+          <ListItem></ListItem>
+        </AppearList>
       </Slide>
       <Slide>
         <Heading>Spørsmål?</Heading>
