@@ -61,7 +61,7 @@ const Presentation = () =>
         <List>
           <ListItem>Deklarativt</ListItem>
           <ListItem>Immuterbarhet</ListItem>
-          <ListItem>Forhåndsdefinerte tilstandsoveranger</ListItem>
+          <ListItem>Forhåndsdefinerte tilstandsoverganger</ListItem>
         </List>
       </Slide>
       <Slide>
