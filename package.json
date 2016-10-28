@@ -1,5 +1,5 @@
 {
-  "name": "spectacle-boilerplate",
+  "name": "reaktiv-programmering",
   "version": "1.0.1",
   "description": "ReactJS Powered Presentation Framework",
   "main": "lib/index.js",
@@ -16,7 +16,7 @@
     "normalize.css": "3.0.3",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
-    "spectacle": "file:../spectacle"
+    "spectacle": "^1.2.5"
   },
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
